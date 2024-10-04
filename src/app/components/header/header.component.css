@@ -1,0 +1,24 @@
+.c-logo {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+    transition: transform 0.2s ease-out;
+  }
+  .c-logo:hover{
+    transform: scale(1.4);
+  }
+  .nav-item a {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: aliceblue;
+    margin: 0 20px;
+    font-size: larger;
+  }
+  .submit-btn{
+    font-weight: bold;
+  }
+  
+  .submit-btn:hover {
+    color: rgb(8, 8, 8) !important;
+  }

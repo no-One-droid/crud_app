@@ -1,0 +1,36 @@
+form{
+    padding: 1rem;
+}
+.modal-feild{
+    margin-bottom: 10px;
+}
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+small {
+    color: red;
+}
+span{
+    color: red;
+}
+p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card{
+    transition: transform 0.3s ease-in-out;
+}
+.highlight-product{  
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    -moz-box-shadow: 0 0 1px 3px #000 inset;
+    border: #efefef 2px solid;
+    box-shadow: 10px 10px 18px #cccccc ; 
+}
+.btn{
+    transition: transform 0.3s ease-in-out;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
