@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import {HttpClientModule} from '@angular/common/http'
 import { EmployeComponent } from './components/employe/employe.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HostListenerDirective } from './custom-directives/host-listener.directive';
 import { HomeComponent } from './components/home/home.component';
 
 
@@ -17,7 +16,6 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     HeaderComponent,
     EmployeComponent,
-    HostListenerDirective,
     HomeComponent
   ],
   imports: [
