@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <div class="col d-flex justify-content-end my-3">
+        <button class="btn btn-outline-dark rounded-pill" routerLink="/employee/create">Add Employe</button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr class="tr">
+                <th class="scope">Id</th>
+                <th class="scope">First Name</th>
+                <th class="scope">last Name</th>
+                <th class="scope">Email</th>
+                <th class="scope">Role</th>
+                <th class="scope">Email</th>
+                <th class="scope">Action</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of allEmployees">
+            <tr class="tr">
+                <th class="scope">{{item.id}}</th>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.role}}</td>
+                <td>{{item.salary}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-success"(click)="onEdit(item.id)">Edit</button>
+                    <button type="button" class="btn btn-outline-danger" (click)="onDelete(item.id)">delete</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+

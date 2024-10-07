@@ -14,6 +14,7 @@ export class EmployeComponent implements OnInit {
   isEditMode: boolean = false;
   empList: Employee[] = [];
   EmployeId!: number;
+  isHovered: boolean = false;
 
 
   constructor(private fb: FormBuilder, private empSerivce: EmployeService){
@@ -133,5 +134,12 @@ export class EmployeComponent implements OnInit {
         console.log(err)
       }
     })
+  }
+
+  onMouseEnter(){
+    this.isHovered = true;
+  }
+  onMouseLeave(){
+    this.isHovered = false;
   }
 }

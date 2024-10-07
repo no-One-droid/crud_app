@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class=" card col-lg-6 offset-lg-3">
+            <div class="card-head text-center">
+                <h2>Edit Employee</h2>
+                <hr class="my-4">
+            </div>
+            <form [formGroup]="createEmpl" (ngSubmit)="createEmpl">
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-12 modal-feild">
+                        <label for="fname">First Name <span>*</span></label>
+                        <input type="text" class="form-control" id="fname" name="fname" formControlName="firstName">
+                        <div *ngIf="fc['firstName'].touched && fc['firstName'].invalid">
+                          <small *ngIf="fc['firstName'].errors?.['required'] ">
+                              First Name is required
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-12 modal-feild">
+                        <label for="lname">Last Name <span>*</span></label>
+                        <input type="text" class="form-control" name="lname" id="lname"formControlName="lastName">
+                        <div *ngIf="fc['lastName'].touched && fc['lastName'].invalid">
+                          <small *ngIf="fc['lastName'].errors?.['required'] ">
+                              Last Name is required
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12 modal-feild">
+                        <label for="email">Email<span>*</span></label>
+                        <input type="text" class="form-control" name="email" id="email" formControlName="email">
+                        <div *ngIf="fc['email'].touched && fc['email'].invalid">
+                          <small *ngIf="fc['email'].errors?.['required'] ">
+                              Email is required
+                          </small>
+                          <small *ngIf="fc['email'].errors?.['email']">
+                            Email is not valid
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12 modal-feild">
+                        <label for="salary">Salary <span>*</span></label>
+                        <input type="number" class="form-control" name="salary" id="salary" formControlName="salary">
+                        <div *ngIf="fc['salary'].touched && fc['salary'].invalid">
+                          <small *ngIf="fc['salary'].errors?.['required'] ">
+                            salary is required
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+                      <div class="col-md-12 col-sm-6 modal-feild">
+                        <label for="role">Role <span>*</span></label>
+                        <input type="text" class="form-control" name="role" id="role" formControlName="role">
+                        <div *ngIf="fc['role'].touched && fc['role'].invalid">
+                          <small *ngIf="fc['role'].errors?.['required'] ">
+                            role is required
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+                <div class=" d-flex justify-content-center my-4">
+                  <button type="submit" class="btn btn-outline-dark w-50" (click)="onSubmit()" [disabled]="createEmpl.invalid" >Update</button>
+                </div>
+               </form>
+            
+        </div>
+    </div>
+</div>

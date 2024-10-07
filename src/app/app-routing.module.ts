@@ -5,7 +5,9 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {path: 'employe', component: EmployeComponent},
-  {path: '', component: HomeComponent}
+  {path: '', component: HomeComponent},
+  {path: 'employee', loadChildren:()=>import('./emp-loyee/emp-loyee.module').then(m => m.EmpLoyeeModule)},
+  {path: '', redirectTo: '/home', pathMatch: 'full'}
 
 ];
 
